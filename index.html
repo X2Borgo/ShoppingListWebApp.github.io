@@ -3,32 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping List App</title>
+    <title>Smart Shopping Companion</title>
     <link rel="stylesheet" href="index.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>My Shopping List</h1>
+        <h1>Smart Shopping Companion</h1>
     </header>
     <main>
-        <section id="add-item">
-            <h2>Add New Item</h2>
-            <form id="item-form">
-                <input type="text" id="item-input" placeholder="Enter item name" required>
-                <button type="submit">Add Item</button>
-            </form>
+        <section id="welcome">
+            <h2>Welcome to Your Shopping Assistant!</h2>
+            <p>Organize your shopping trips with ease. What would you like to do today?</p>
         </section>
-        <section id="shopping-list">
-            <h2>Current List</h2>
-            <ul id="list-items">
-                <!-- List items will be added here dynamically -->
-            </ul>
+        <section id="options">
+            <div class="option-card">
+                <i class="fas fa-list"></i>
+                <h3>Manage Products</h3>
+                <p>Add or edit your regularly bought products.</p>
+                <button onclick="window.location.href = 'manage_products.html'">Manage Products</button>
+            </div>
+            <div class="option-card">
+                <i class="fas fa-plus-circle"></i>
+                <h3>Create Shopping List</h3>
+                <p>Select products to buy from your regular items.</p>
+                <button onclick="window.location.href = 'create_list.html'">Create List</button>
+            </div>
+            <div class="option-card">
+                <i class="fas fa-file-import"></i>
+                <h3>Import Data</h3>
+                <p>Upload an existing shopping list or products list.</p>
+                <button onclick="importShoppingList()">Import Shopping List</button>
+                <button onclick="importProductsList()">Import Products List</button>
+            </div>
+            <div class="option-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Start Shopping</h3>
+                <p>Begin your shopping trip with your current list.</p>
+                <button onclick="startShopping()">Go Shopping</button>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Shopping List App</p>
+        <p>&copy; 2024 Smart Shopping Companion</p>
     </footer>
     <script src="app.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products - Smart Shopping Companion</title>
+    <link rel="stylesheet" href="manage_products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Manage Products</h1>
+    </header>
+    <main>
+        <button id="back-button" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </button>
+        <section id="add-product">
+            <h2>Add New Product</h2>
+            <form id="product-form">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <input type="text" id="product-category" placeholder="Category">
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+        <section id="product-list">
+            <h2>Your Products</h2>
+            <ul id="products"></ul>
+            <button id="download-csv" class="download-button">
+                <i class="fas fa-download"></i> Download JSON
+            </button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Smart Shopping Companion</p>
+    </footer>
+    <script src="manage_products.js"></script>
+</body>
+</html>

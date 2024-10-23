@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4a90e2;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex: 1;
+    padding: 2rem 2rem 5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.back-button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #3a7bc8;
+}
+
+#product-selection, #selected-products {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #4a90e2;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+#product-list, #shopping-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.product-item:hover {
+    background-color: #f5f5f5;
+}
+
+.product-item .product-info {
+    flex-grow: 1;
+}
+
+.product-item .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.product-item .quantity-controls span {
+    margin: 0 0.5rem;
+    font-weight: bold;
+}
+
+.product-item button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+#shopping-list .product-item .remove-from-list-btn {
+    background-color: #e74c3c;
+}
+
+.product-item button:hover {
+    opacity: 0.8;
+}
+
+#shopping-list {
+    min-height: 50px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.save-button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #3a7bc8;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4a90e2;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Add this to your existing CSS */
+.add-to-list-btn.added {
+    background-color: #5cb85c;
+    cursor: default;
+}
+
+.add-to-list-btn.added:hover {
+    opacity: 1;
+}
+
+/* Add this to your existing CSS */
+.product-item .quantity-controls button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-item .quantity-controls button:hover {
+    background-color: #3a7bc8;
+}
+
+.product-item .quantity-controls button:disabled {
+    background-color: #4a90e2;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.download-button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.download-button:hover {
+    background-color: #3a7bc8;
+}
+
+.download-button i {
+    font-size: 1.2rem;
+}
+
+.download-button:disabled,
+.download-button.disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.download-button:disabled:hover,
+.download-button.disabled:hover {
+    background-color: #BDBDBD;
+}
